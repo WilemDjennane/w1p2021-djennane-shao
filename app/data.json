@@ -1,0 +1,38 @@
+{
+  "steps": [
+    {
+      "id": 1,
+      "title": "Bienvenue à toi jeune aventurier",
+      "actions": [
+        {
+          "label": "Aller dans le dungeon",
+          "to": 2
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "title": "Commençons le jeu",
+      "actions": [
+        {
+          "label": "Start",
+          "to": 3
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "title": "Chemin de gauche",
+      "actions": [
+        {
+          "label": "Allez a droite",
+          "to": 2
+        },
+        {
+          "label": "Allez a gauche",
+          "to": 3
+        }
+      ]
+    }
+  ]
+}

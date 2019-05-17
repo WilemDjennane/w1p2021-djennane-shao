@@ -1,7 +1,7 @@
 <template>
   <div class="big-header">
     <h1>{{ message }}</h1>
-    <br />
+    <br>
     <router-link class="button" to="/page">Go to Page</router-link>
   </div>
 </template>
@@ -10,7 +10,7 @@
 export default {
   data() {
     return {
-      message: 'Hello Hetic'
+      message: "Welcom to the dungeon"
     };
   }
 };
