@@ -1,8 +1,8 @@
 <template>
-  <div class="big-header">
-    <h1>{{ message }}</h1>
-    <br>
-    <router-link class="button" to="/page">Go to Page</router-link>
+  <div class="home">
+    <audio src="/assets/audios/home.mp3" autoplay loop></audio>
+    <h1 class="home__text">{{ message }}</h1>
+    <router-link class="home__link" to="/page">Jouer</router-link>
   </div>
 </template>
 
@@ -10,7 +10,7 @@
 export default {
   data() {
     return {
-      message: "Welcom to the dungeon"
+      message: "Welcome to the dungeon"
     };
   }
 };
