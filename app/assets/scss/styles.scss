@@ -1,6 +1,9 @@
 @import 'reset';
 @import url('https://fonts.googleapis.com/css?family=Roboto:300,400,700,900');
+@import 'layout/base';
 @import 'pages/home';
+@import 'pages/characters';
+@import 'pages/game';
 
 body {
   user-select: none;
@@ -38,4 +41,53 @@ textarea {
   border-radius: 5px;
   display: inline-block;
   border: none;
+}
+
+.pane-leave-active,
+.pane-enter-active {
+
+  &::after {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    transform: translateX(100vw);
+    z-index: 999;
+    background: #1e1e1e;
+  }
+}
+
+.pane-leave-active {
+  animation: fake 1s;
+
+  &::after {
+    animation: slideLeave 1s;
+  }
+}
+
+.pane-enter-active {
+  animation: fake 2s;
+
+  &::after {
+    animation: slideEnter 1s ease 1s;
+  }
+}
+
+@keyframes slideLeave {
+  to {
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideEnter {
+  from {
+    transform: translate(0);
+  }
+
+  to {
+    transform: translateX(-100vw);
+  }
 }

@@ -2,7 +2,7 @@
   <div class="home">
     <audio src="/assets/audios/home.mp3" autoplay loop></audio>
     <h1 class="home__text">{{ message }}</h1>
-    <router-link class="home__link" to="/page">Jouer</router-link>
+    <router-link class="home__link" to="/game/1">Jouer</router-link>
   </div>
 </template>
 
