@@ -17,7 +17,7 @@
     {
       "id": 1,
       "title": "Une nouvelle aventure",
-      "background": "background.jpg",
+      "background": "https://www.google.com/url?sa=i&source=images&cd=&ved=&url=https%3A%2F%2Fdeveloper.mozilla.org%2Ffr%2Fdocs%2FWeb%2FHTML%2FElement%2FImg&psig=AOvVaw1fOquw63GMtTYtbVZdSZ50&ust=1558436716633543",
       "description": "He vous ! Ne seriez-vous pas là pour trouver l'arme légendaire qui est enfouie dans ce dungeon ? Cependant, je vous met en garde, vous sera le seul responsable des choix que vous feriez puisque celle-ci causera la mort de tes camarades...",
       "actions": [
         {
@@ -29,10 +29,11 @@
     {
       "id": 2,
       "title": "Une voix étrange",
+      "background": "background",
       "description": "Camarade : \" Mais qu'est-ce que cette voix ? Que deverions-nous faire maintenant ? \"",
       "actions": [
         {
-          "label": "Continuez votre chemin",
+          "label": "Poursuivre votre chemin",
           "to": 3
         },
         {
@@ -44,6 +45,7 @@
     {
       "id": 3,
       "title": "Un tas d'os",
+      "background": "background",
       "description": "Vous prousuivez votre chemin et vous appercever un squelette avec une carnet de note, dans laquel est écrit \" Si vous lisz cette note, faite attention à où vous mettiez les pieds et ne faites pas confiance à ..... \" la fin de la note est décomposé",
       "actions": [
         {
@@ -55,6 +57,7 @@
     {
       "id": 4,
       "title": "Je la sens",
+      "background": "background",
       "description": "Vous vous approchez de plus en plus de cette fameuse voix du dungeon",
       "actions": [
         {
@@ -66,6 +69,7 @@
     {
       "id": 5,
       "title": "Deux chemins ?",
+      "background": "background",
       "description": "Vous allez faire un choix, aller à gauche ou à droite",
       "actions": [
         {
@@ -80,79 +84,79 @@
     },
     {
       "id": 6,
-      "title": "Deux chemins ?",
-      "description": "Vous et vous co-équipier allez choisir de faire le chemin séparement ou le poursuivre à essemble",
+      "title": "Une ombre",
+      "background": "room",
+      "description": "Au loin de votre chemin vous croiser une sorte d'entité simuler dans l'ombre",
+      "death": "En vous approchant de l'entité, celle-ci tue tout ce qui est s'approche trop de lui",
       "actions": [
         {
-          "label": "continuer",
+          "label": "Voir de plus près",
           "to": "/lose"
+        },
+        {
+          "label": "Faire marche arrière",
+          "to": 5
         }
       ]
     },
     {
       "id": 7,
-      "title": "Deux chemins ?",
-      "description": "Vous et vous co-équipier allez choisir de faire le chemin séparement ou le poursuivre à essemble",
+      "title": "Une bataille",
+      "background": "background",
+      "description": "Un combat féroce semnle s'est produit il n'y a pas si longtemps, on apperçoit des traces de feu ardente",
       "actions": [
         {
-          "label": "Se séparer en deux groupe",
-          "to": "/lose"
-        },
-        {
-          "label": "Tous aller à droite",
-          "to": 3
+          "label": "Continuer",
+          "to": 10
         }
       ]
     },
     {
       "id": 8,
       "title": "Une petite fille",
+      "background": "background",
       "description": "Camarade : \" Mais comment est-ce possible ? Qu'est ce qu'elle peut bien faire la ? \"",
+      "recover": true,
       "actions": [
         {
           "label": "L ' accompagner avec vous",
-          "to": 4
+          "to": 9
         },
         {
           "label": "La laisser tranquille",
-          "to": 3
+          "to": 7
         }
       ]
     },
     {
       "id": 9,
-      "title": "Deux chemins ?",
-      "description": "Vous et vous co-équipier allez choisir de faire le chemin séparement ou le poursuivre à essemble",
+      "title": "Elle?",
+      "background": "background",
+      "description": "N'est pas bizzarre",
       "actions": [
         {
           "label": "Se séparer en deux groupe",
-          "to": "/lose"
-        },
-        {
-          "label": "Tous aller à droite",
-          "to": 3
+          "to": 7
         }
       ]
     },
     {
       "id": 10,
-      "title": "Deux chemins ?",
-      "description": "Vous et vous co-équipier allez choisir de faire le chemin séparement ou le poursuivre à essemble",
+      "title": "",
+      "background": "background",
+      "description": "",
       "actions": [
         {
-          "label": "Se séparer en deux groupe",
+          "label": "Continuez",
           "to": "/lose"
-        },
-        {
-          "label": "Tous aller à droite",
-          "to": 3
         }
       ]
     },
     {
       "id": 11,
-      "title": "Deux chemins ?",
-      "description": "Vous et vous co-équipier allez choisir de faire le chemin séparement ou le poursuivre à essemble",
+      "title": "",
+      "background": "background",
+      "description": "Un combat s'est produit dans ses lieux il y a pas si longtemps ",
       "actions": [
         {
           "label": "Se séparer en deux groupe",
@@ -167,6 +171,7 @@
     {
       "id": 12,
       "title": "Deux chemins ?",
+      "background": "background",
       "description": "Vous et vous co-équipier allez choisir de faire le chemin séparement ou le poursuivre à essemble",
       "actions": [
         {
@@ -182,6 +187,7 @@
     {
       "id": 13,
       "title": "Deux chemins ?",
+      "background": "background",
       "description": "Vous et vous co-équipier allez choisir de faire le chemin séparement ou le poursuivre à essemble",
       "actions": [
         {
@@ -197,6 +203,7 @@
     {
       "id": 14,
       "title": "Deux chemins ?",
+      "background": "background",
       "description": "Vous et vous co-équipier allez choisir de faire le chemin séparement ou le poursuivre à essemble",
       "actions": [
         {
@@ -212,6 +219,7 @@
     {
       "id": 15,
       "title": "Deux chemins ?",
+      "background": "background",
       "description": "Vous et vous co-équipier allez choisir de faire le chemin séparement ou le poursuivre à essemble",
       "actions": [
         {
@@ -227,6 +235,7 @@
     {
       "id": 16,
       "title": "Deux chemins ?",
+      "background": "background",
       "description": "Vous et vous co-équipier allez choisir de faire le chemin séparement ou le poursuivre à essemble",
       "actions": [
         {
@@ -242,6 +251,7 @@
     {
       "id": 17,
       "title": "Deux chemins ?",
+      "background": "background",
       "description": "Vous et vous co-équipier allez choisir de faire le chemin séparement ou le poursuivre à essemble",
       "actions": [
         {
@@ -257,6 +267,7 @@
     {
       "id": 18,
       "title": "Deux chemins ?",
+      "background": "background",
       "description": "Vous et vous co-équipier allez choisir de faire le chemin séparement ou le poursuivre à essemble",
       "actions": [
         {
@@ -272,6 +283,7 @@
     {
       "id": 19,
       "title": "Deux chemins ?",
+      "background": "background",
       "description": "Vous et vous co-équipier allez choisir de faire le chemin séparement ou le poursuivre à essemble",
       "actions": [
         {
@@ -287,6 +299,7 @@
     {
       "id": 20,
       "title": "Deux chemins ?",
+      "background": "background",
       "description": "Vous et vous co-équipier allez choisir de faire le chemin séparement ou le poursuivre à essemble",
       "actions": [
         {
@@ -302,6 +315,7 @@
     {
       "id": 21,
       "title": "Deux chemins ?",
+      "background": "background",
       "description": "Vous et vous co-équipier allez choisir de faire le chemin séparement ou le poursuivre à essemble",
       "actions": [
         {
@@ -317,6 +331,7 @@
     {
       "id": 22,
       "title": "Deux chemins ?",
+      "background": "background",
       "description": "Vous et vous co-équipier allez choisir de faire le chemin séparement ou le poursuivre à essemble",
       "actions": [
         {
@@ -332,6 +347,7 @@
     {
       "id": 23,
       "title": "Deux chemins ?",
+      "background": "background",
       "description": "Vous et vous co-équipier allez choisir de faire le chemin séparement ou le poursuivre à essemble",
       "actions": [
         {
@@ -347,6 +363,7 @@
     {
       "id": 24,
       "title": "Deux chemins ?",
+      "background": "background",
       "description": "Vous et vous co-équipier allez choisir de faire le chemin séparement ou le poursuivre à essemble",
       "actions": [
         {
@@ -362,6 +379,7 @@
     {
       "id": 25,
       "title": "Deux chemins ?",
+      "background": "background",
       "description": "Vous et vous co-équipier allez choisir de faire le chemin séparement ou le poursuivre à essemble",
       "actions": [
         {
@@ -377,6 +395,7 @@
     {
       "id": 26,
       "title": "Deux chemins ?",
+      "background": "background",
       "description": "Vous et vous co-équipier allez choisir de faire le chemin séparement ou le poursuivre à essemble",
       "actions": [
         {
@@ -392,6 +411,7 @@
     {
       "id": 27,
       "title": "Deux chemins ?",
+      "background": "background",
       "description": "Vous et vous co-équipier allez choisir de faire le chemin séparement ou le poursuivre à essemble",
       "actions": [
         {
@@ -407,6 +427,7 @@
     {
       "id": 28,
       "title": "Deux chemins ?",
+      "background": "background",
       "description": "Vous et vous co-équipier allez choisir de faire le chemin séparement ou le poursuivre à essemble",
       "actions": [
         {
@@ -422,6 +443,7 @@
     {
       "id": 29,
       "title": "Deux chemins ?",
+      "background": "background",
       "description": "Vous et vous co-équipier allez choisir de faire le chemin séparement ou le poursuivre à essemble",
       "actions": [
         {
@@ -437,6 +459,7 @@
     {
       "id": 30,
       "title": "Deux chemins ?",
+      "background": "background",
       "description": "Vous et vous co-équipier allez choisir de faire le chemin séparement ou le poursuivre à essemble",
       "actions": [
         {

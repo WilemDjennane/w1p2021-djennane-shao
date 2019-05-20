@@ -2,7 +2,9 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto:300,400,700,900');
 @import 'layout/base';
 @import 'pages/home';
+@import 'pages/characters';
 @import 'pages/game';
+@import 'pages/lose';
 
 body {
   user-select: none;
