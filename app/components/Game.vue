@@ -28,7 +28,7 @@ export default {
     };
   },
   mounted: function() {},
-  metds: {
+  methods: {
     getStep() {
       return json.steps.find(s => s.id === parseInt(this.$route.params.id));
     }
