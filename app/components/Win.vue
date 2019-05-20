@@ -1,5 +1,5 @@
 <template>
-  <div class>Tu as gagner</div>
+  <div class>Tu as gagné</div>
 </template>
 <script>
 export default {};
