@@ -7,6 +7,10 @@ URL du site : https://w1p2021-djennane-shao.netlify.com
 - Wilem Djennane
 - Jacky Shao
 
+### Grille d'auto-évaluation
+
+À insérer ici !
+
 ## Prologue
 
 - Voici le cahier des charges que doit respecter **au minimum** le projet.
@@ -26,14 +30,16 @@ Le projet doit être construit avec le framework [VueJS](https://vuejs.org/).
 ### Lancer le projet
 
 Se mettre dans un terminal dans le répertoire du projet forké, puis :
-* `npm i`
-* `npm run dev`
+
+- `npm i`
+- `npm run dev`
 
 #### Plugins conseillés
 
-- [Vue.js devtools pour Chrome](https://chrome.google.com/webstore/detail/vuejs-devtools/nhdogjmejiglipccpnnnanhbledajbpd)
-- [Vue.js devtools pour Firefox](https://addons.mozilla.org/fr/firefox/addon/vue-js-devtools/)
-- [Plugin eslint pour VSCode](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint)
+- [Vue.js devtools pour Chrome, inspecteur vue](https://chrome.google.com/webstore/detail/vuejs-devtools/nhdogjmejiglipccpnnnanhbledajbpd)
+- [Vue.js devtools pour Firefox, inspecteur vue](https://addons.mozilla.org/fr/firefox/addon/vue-js-devtools/)
+- [Plugin vue pour VSCode, coloration syntaxique](https://marketplace.visualstudio.com/items?itemName=octref.vetur)
+- [Plugin eslint pour VSCode, validation de code](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint)
 
 ### Structure des données
 
@@ -195,6 +201,7 @@ Notes :
 | Setup | Le site est en ligne, et l'URL est citée dans le README.md | - |
 | Setup | Le site utilise VueJS | - |
 | Setup | Cloner le repository et exécuter `npm install` puis `npm run dev` s'effectue sans encombre | - |
+| Données | Un schéma numérique ou papier (scanné ou photographié) décrivant les différentes étapes et enchaînements possible. Affiché dans ce readme (si plusieurs images sont nécessaires, en afficher plusieurs, mais essayer d'être synthétique). | - |
 | Données | Un fichier `data.json` est utilisé pour stocker la structure du jeu | - |
 | Données | Le fichier `data.json` décrit 30 phases de jeu ou plus. Indiquez *En partie* s'il en décrit plus de 15. | - |
 | Pages | Une page d'accueil est présente | - |
@@ -214,3 +221,4 @@ Notes :
 | Multimédia | L'expérience présente une vidéo ou plus | - |
 | Multimédia | L'expérience présente un audio ou plus | - |
 | Multimédia | L'utilisateur a la possibilité de couper le son à tout moment | - |
+| Facultatif | Le repository contient un dossier /ressources contenant toutes les ressources ayant servi à la conception du jeu (schéma, design, figma...) | - |
