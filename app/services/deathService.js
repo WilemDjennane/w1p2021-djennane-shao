@@ -7,7 +7,7 @@ class DeathService {
     localStorage.setItem('death', JSON.stringify(id));
   }
   value() {
-    return JSON.parse(localStorage.getItem('death'));
+    return localStorage.getItem('death');
   }
 }
 

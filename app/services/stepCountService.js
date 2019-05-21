@@ -1,6 +1,6 @@
 class StepCountService {
   constructor() {
-    this.stepCount = localStorage.getItem('step') || 'error';
+    this.stepCount = localStorage.getItem('step') || 1;
   }
 
   count(id) {

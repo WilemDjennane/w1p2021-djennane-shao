@@ -1,7 +1,10 @@
 <template>
   <div class="lose">
     <h1 class="lose__title">Vous êtes mort !</h1>
-    <p class="lose__description">{{death}}</p>
+    <div class="lose__text">
+      <p>{{death}}</p>
+      <p>Vous verriez mieux la prochaine fois !</p>
+    </div>
     <router-link to="/game/1" class="lose__link">
       <span @click="reset">Rejouer</span>
     </router-link>
