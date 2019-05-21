@@ -9,7 +9,7 @@
 
 <script>
 const step = JSON.parse(localStorage.getItem("step"));
-if (!step) return localStorage.setItem("step", 1);
+if (!step) localStorage.setItem("step", 1);
 
 import stepCountService from "../services/stepCountService";
 import charactersService from "../services/charactersService";
