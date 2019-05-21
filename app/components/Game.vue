@@ -52,6 +52,10 @@ export default {
       if (step.id === 11) {
         localStorage.setItem("item", true);
       }
+      const girlCheck = JSON.parse(localStorage.getItem("recover"));
+      if (step.id === 12 && girlCheck == true) {
+        console.log(router);
+      }
     },
     getDeath() {
       const deathStep = data.steps.find(

@@ -22,6 +22,3 @@ new Vue({ router: router }).$mount('#root');
 //     }, 300);
 //   }
 // });
-
-const step = JSON.parse(localStorage.getItem('step'));
-if (!step) return localStorage.setItem('step', 1);

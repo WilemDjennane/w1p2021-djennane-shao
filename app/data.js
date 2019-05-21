@@ -168,13 +168,13 @@ export default {
       actions: [
         {
           label: 'Récuperer',
-          to: 13
+          to: 12
         }
       ]
     },
     {
       id: 12,
-      title: 'Deux chemins ?',
+      title: 'La fi',
       image: mainImage,
       description: 'Vous et vous co-équipier allez choisir de faire le chemin séparement ou le poursuivre à essemble',
       actions: [
