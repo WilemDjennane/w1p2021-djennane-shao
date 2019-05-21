@@ -1,5 +1,6 @@
-const image = require('./assets/images/background.jpg');
-const image2 = require('./assets/images/room.jpg');
+const mainImage = require('./assets/images/background.jpg');
+const roomImage = require('./assets/images/room.jpg');
+const voiceImage = require('./assets/images/voice.jpg');
 
 export default {
   characters: [
@@ -20,7 +21,7 @@ export default {
     {
       id: 1,
       title: 'Une nouvelle aventure',
-      image: image,
+      image: mainImage,
       description: "He vous ! Ne seriez-vous pas là pour trouver l'arme légendaire qui est enfouie dans ce dungon ? Cependant, je vous met en garde, vous sera le seul responsable des choix que vous feriez puisque celle-ci causera la mort de tes camarades...",
       actions: [
         {
@@ -32,7 +33,7 @@ export default {
     {
       id: 2,
       title: 'Une voix étrange',
-      image: image,
+      image: voiceImage,
       description: 'Camarade : " Mais qu\'est-ce que cette voix ? Que deverions-nous faire maintenant ? "',
       actions: [
         {
@@ -48,7 +49,7 @@ export default {
     {
       id: 3,
       title: "Un tas d'os",
-      image: image,
+      image: mainImage,
       description: 'Vous prousuivez votre chemin et vous appercever un squelette avec une carnet de note, dans laquel est écrit " Si vous lisz cette note, faite attention à où vous mettiez les pieds et ne faites pas confiance à ..... " la fin de la note est illisible',
       actions: [
         {
@@ -60,7 +61,7 @@ export default {
     {
       id: 4,
       title: 'Je la sens',
-      image: image,
+      image: voiceImage,
       description: 'Vous vous approchez de plus en plus de cette fameuse voix du dungeon',
       actions: [
         {
@@ -72,7 +73,7 @@ export default {
     {
       id: 5,
       title: 'Deux chemins ?',
-      image: image,
+      image: mainImage,
       description: 'Vous allez faire un choix, aller à gauche ou à droite',
       actions: [
         {
@@ -88,7 +89,7 @@ export default {
     {
       id: 6,
       title: 'Une ombre',
-      image: image2,
+      image: roomImage,
       description: "Au loin de votre chemin vous croiser une sorte d'entité simuler dans l'ombre",
       death: "En vous approchant de l'entité, celle-ci vous a instantanément tuer",
       actions: [
@@ -105,7 +106,7 @@ export default {
     {
       id: 7,
       title: 'Une bataille',
-      image: image,
+      image: mainImage,
       description: "Un combat féroce semnle s'est produit il n'y a pas si longtemps, on apperçoit des traces de feu ardente",
       actions: [
         {
@@ -117,7 +118,7 @@ export default {
     {
       id: 8,
       title: 'Une petite fille',
-      image: image,
+      image: mainImage,
       description: 'Camarade : " Mais comment est-ce possible ? Qu\'est ce qu\'elle peut bien faire la ? "',
       recover: true,
       actions: [
@@ -134,7 +135,7 @@ export default {
     {
       id: 9,
       title: 'Elle ?',
-      image: image,
+      image: mainImage,
       description: 'Cete fille ne vous parait-elle pas bizzare ? Seul dans ce dungeon ?',
       actions: [
         {
@@ -145,52 +146,48 @@ export default {
     },
     {
       id: 10,
-      title: '',
-      image: image,
-      description: '',
+      title: 'Une pierre tombale',
+      image: mainImage,
+      description: "Ici repose et enterrer le corps d'un ancier guerrier de la table ronde",
       actions: [
         {
-          label: 'Continuez',
-          to: '/lose'
+          label: 'Creuser',
+          to: 11
+        },
+        {
+          label: 'Avancer',
+          to: 12
         }
       ]
     },
     {
       id: 11,
-      title: '',
-      image: image,
-      description: "Un combat s'est produit dans ses lieux il y a pas si longtemps ",
+      title: 'Un objet',
+      image: mainImage,
+      description: 'Mais ceci ne serrai pas la pierre légendaire disparu depuis 100 ans ? Elle pourrais pour servir pendant votre périple',
       actions: [
         {
-          label: 'Se séparer en deux groupe',
-          to: '/lose'
-        },
-        {
-          label: 'Tous aller à droite',
-          to: 3
+          label: 'Récuperer',
+          to: 13
         }
       ]
     },
     {
       id: 12,
       title: 'Deux chemins ?',
-      image: image,
+      image: mainImage,
       description: 'Vous et vous co-équipier allez choisir de faire le chemin séparement ou le poursuivre à essemble',
       actions: [
         {
           label: 'Se séparer en deux groupe',
-          to: '/lose'
-        },
-        {
-          label: 'Tous aller à droite',
-          to: 3
+          to: 13
         }
       ]
     },
     {
       id: 13,
       title: 'Deux chemins ?',
-      image: image,
+      image: mainImage,
       description: 'Vous et vous co-équipier allez choisir de faire le chemin séparement ou le poursuivre à essemble',
       actions: [
         {
@@ -206,7 +203,7 @@ export default {
     {
       id: 14,
       title: 'Deux chemins ?',
-      image: image,
+      image: mainImage,
       description: 'Vous et vous co-équipier allez choisir de faire le chemin séparement ou le poursuivre à essemble',
       actions: [
         {
@@ -222,7 +219,7 @@ export default {
     {
       id: 15,
       title: 'Deux chemins ?',
-      image: image,
+      image: mainImage,
       description: 'Vous et vous co-équipier allez choisir de faire le chemin séparement ou le poursuivre à essemble',
       actions: [
         {
@@ -238,7 +235,7 @@ export default {
     {
       id: 16,
       title: 'Deux chemins ?',
-      image: image,
+      image: mainImage,
       description: 'Vous et vous co-équipier allez choisir de faire le chemin séparement ou le poursuivre à essemble',
       actions: [
         {
@@ -254,7 +251,7 @@ export default {
     {
       id: 17,
       title: 'Deux chemins ?',
-      image: image,
+      image: mainImage,
       description: 'Vous et vous co-équipier allez choisir de faire le chemin séparement ou le poursuivre à essemble',
       actions: [
         {
@@ -270,7 +267,7 @@ export default {
     {
       id: 18,
       title: 'Deux chemins ?',
-      image: image,
+      image: mainImage,
       description: 'Vous et vous co-équipier allez choisir de faire le chemin séparement ou le poursuivre à essemble',
       actions: [
         {
@@ -286,7 +283,7 @@ export default {
     {
       id: 19,
       title: 'Deux chemins ?',
-      image: image,
+      image: mainImage,
       description: 'Vous et vous co-équipier allez choisir de faire le chemin séparement ou le poursuivre à essemble',
       actions: [
         {
@@ -302,7 +299,7 @@ export default {
     {
       id: 20,
       title: 'Deux chemins ?',
-      image: image,
+      image: mainImage,
       description: 'Vous et vous co-équipier allez choisir de faire le chemin séparement ou le poursuivre à essemble',
       actions: [
         {
@@ -318,7 +315,7 @@ export default {
     {
       id: 21,
       title: 'Deux chemins ?',
-      image: image,
+      image: mainImage,
       description: 'Vous et vous co-équipier allez choisir de faire le chemin séparement ou le poursuivre à essemble',
       actions: [
         {
@@ -334,7 +331,7 @@ export default {
     {
       id: 22,
       title: 'Deux chemins ?',
-      image: image,
+      image: mainImage,
       description: 'Vous et vous co-équipier allez choisir de faire le chemin séparement ou le poursuivre à essemble',
       actions: [
         {
@@ -350,7 +347,7 @@ export default {
     {
       id: 23,
       title: 'Deux chemins ?',
-      image: image,
+      image: mainImage,
       description: 'Vous et vous co-équipier allez choisir de faire le chemin séparement ou le poursuivre à essemble',
       actions: [
         {
@@ -366,7 +363,7 @@ export default {
     {
       id: 24,
       title: 'Deux chemins ?',
-      image: image,
+      image: mainImage,
       description: 'Vous et vous co-équipier allez choisir de faire le chemin séparement ou le poursuivre à essemble',
       actions: [
         {
@@ -382,7 +379,7 @@ export default {
     {
       id: 25,
       title: 'Deux chemins ?',
-      image: image,
+      image: mainImage,
       description: 'Vous et vous co-équipier allez choisir de faire le chemin séparement ou le poursuivre à essemble',
       actions: [
         {
@@ -398,7 +395,7 @@ export default {
     {
       id: 26,
       title: 'Deux chemins ?',
-      image: image,
+      image: mainImage,
       description: 'Vous et vous co-équipier allez choisir de faire le chemin séparement ou le poursuivre à essemble',
       actions: [
         {
@@ -414,7 +411,7 @@ export default {
     {
       id: 27,
       title: 'Deux chemins ?',
-      image: image,
+      image: mainImage,
       description: 'Vous et vous co-équipier allez choisir de faire le chemin séparement ou le poursuivre à essemble',
       actions: [
         {
@@ -430,7 +427,7 @@ export default {
     {
       id: 28,
       title: 'Deux chemins ?',
-      image: image,
+      image: mainImage,
       description: 'Vous et vous co-équipier allez choisir de faire le chemin séparement ou le poursuivre à essemble',
       actions: [
         {
@@ -446,7 +443,7 @@ export default {
     {
       id: 29,
       title: 'Deux chemins ?',
-      image: image,
+      image: mainImage,
       description: 'Vous et vous co-équipier allez choisir de faire le chemin séparement ou le poursuivre à essemble',
       actions: [
         {
@@ -462,7 +459,7 @@ export default {
     {
       id: 30,
       title: 'Deux chemins ?',
-      image: image,
+      image: mainImage,
       description: 'Vous et vous co-équipier allez choisir de faire le chemin séparement ou le poursuivre à essemble',
       actions: [
         {

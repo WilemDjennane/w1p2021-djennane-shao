@@ -1,10 +1,8 @@
 <template>
   <div class="game">
-    <!-- <img :src="step.background" :alt="step.background" class="game__image"> -->
-    <img :src="step.image" :alt="step.background" class="game__image">
     <audio src="/assets/audios/game.mp3" autoplay loop></audio>
     <!-- <transition-group> -->
-    <!-- <img src="/assets/images/background.jpg" :alt="step.background" class="game__image"> -->
+    <img :src="step.image" :alt="step.background" class="game__image">
     <h1 class="game__title">{{step.title}}</h1>
     <div class="game__content">
       <p class="game__description">{{step.description}}</p>
@@ -15,7 +13,7 @@
           :key="action.value"
           :to="action.to.toString()"
         >
-          <span @click="countStep, getGirl">{{action.label}}</span>
+          <span @click="countStep, check">{{action.label}}</span>
         </router-link>
       </div>
     </div>
@@ -27,7 +25,6 @@
 import data from "../data";
 import stepCountService from "../services/stepCountService";
 import deathService from "../services/deathService";
-import girlService from "../services/girlService";
 
 export default {
   data: function() {
@@ -45,13 +42,15 @@ export default {
       );
       stepCountService.count(stepCountNub.id);
     },
-    getGirl() {
-      const deathStep = data.steps.find(
+    check() {
+      const step = data.steps.find(
         s => s.id === parseInt(this.$route.params.id)
       );
-      if (deathStep.recover) {
-        console.log("dfdsfd");
+      if (step.id === 9) {
         localStorage.setItem("recover", true);
+      }
+      if (step.id === 11) {
+        localStorage.setItem("item", true);
       }
     },
     getDeath() {
@@ -65,8 +64,8 @@ export default {
     "$route.params.id"(to, from) {
       this.step = this.getStep();
       this.countStep();
-      this.getGirl();
       this.getDeath();
+      this.check();
     }
   }
 };
