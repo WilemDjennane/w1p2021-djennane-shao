@@ -56,7 +56,7 @@ export default {
     },
     {
       id: 3,
-      title: 'Des OS',
+      title: 'Sombre',
       image: wayImage,
       description: 'Ce couloir semble sûr mais rien ne semble normal depuis notre arriver',
       actions: [
@@ -249,7 +249,7 @@ export default {
       id: 17,
       title: 'Sans confiance',
       image: saveImage,
-      description: "La petite fille n'était si innoncente que sa, elle vous traine a jusqu'a une stelle dans laqulle quelque chose afin que vous lui ramener la relique",
+      description: "La petite fille n'était pas si innoncente que sa, elle vous traine jusqu'à la relique pour que vous lui la ramène",
       actions: [
         {
           label: 'Voir de plus pres',
