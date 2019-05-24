@@ -1,5 +1,7 @@
 <template>
   <div class="lose">
+    <img src="/assets/images/lose.jpg" alt class="lose__image">
+    <audio src="/assets/audios/lose.mp3" autoplay></audio>
     <h1 class="lose__title">Vous êtes mort !</h1>
     <div class="lose__text">
       <p>{{death}}</p>

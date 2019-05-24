@@ -2,8 +2,10 @@
   <div class="home">
     <audio src="/assets/audios/home.mp3" autoplay loop></audio>
     <h1 class="home__text">{{ message }}</h1>
-    <router-link class="home__link" to="/character">Votre héro</router-link>
-    <router-link class="home__link" :to="'/game/'+go">Jouer</router-link>
+    <div class="home__content">
+      <router-link class="home__link" to="/character">Personnage</router-link>
+      <router-link class="home__link" :to="'/game/'+go">Jouer</router-link>
+    </div>
   </div>
 </template>
 

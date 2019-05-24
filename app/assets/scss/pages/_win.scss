@@ -1,6 +1,6 @@
-.lose {
-  height: 100vh;
+.win {
   width: 100vw;
+  height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
@@ -23,18 +23,20 @@
     z-index: -2;
   }
 
+  &__content {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+
   &__title {
     font-size: 50px;
     text-transform: uppercase;
     font-weight: 900;
   }
 
-  &__text {
-    text-align: center;
-    line-height: 2;
-  }
-
   &__link {
+    margin: 20px 0 0 0;
     text-transform: uppercase;
     font-weight: bold;
   }

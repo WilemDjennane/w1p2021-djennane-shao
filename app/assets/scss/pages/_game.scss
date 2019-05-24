@@ -1,4 +1,5 @@
 .game {
+  position: relative;
   height: 100vh;
   width: 100vw;
   display: flex;
@@ -20,26 +21,7 @@
     font-weight: bold;
     text-transform: uppercase;
     background-color: #1e1e1e;
-    padding: 10px 50px;
-
-    &::before,
-    &::after {
-      content: '';
-      position: absolute;
-      height: 50%;
-      width: 30%;
-      background-color: #1e1e1e;
-      top: 50%;
-      transform: translateY(-50%)
-    }
-
-    &:before {
-      left: -30%;
-    }
-
-    &::after {
-      right: -30%;
-    }
+    padding: 10px 100px;
   }
 
   &__content {

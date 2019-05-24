@@ -4,7 +4,7 @@
   background: url('/assets/images/home.jpg') center no-repeat;
   background-size: cover;
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-around;
   align-items: center;
   flex-direction: column;
 
@@ -17,6 +17,12 @@
     width: 50%;
     line-height: .7;
     text-align: center;
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
 
   &__link {
