@@ -1,6 +1,14 @@
 const mainImage = require('./assets/images/background.jpg');
 const roomImage = require('./assets/images/room.jpg');
 const voiceImage = require('./assets/images/voice.jpg');
+const wayImage = require('./assets/images/way.jpg');
+const twowayImage = require('./assets/images/twoway.jpg');
+const gardianImage = require('./assets/images/gardian.jpg');
+const fghtImage = require('./assets/images/fight.jpg');
+const corridorImage = require('./assets/images/corridor.jpg');
+const weaponImage = require('./assets/images/weapon.jpg');
+const tombImage = require('./assets/images/tomb.jpg');
+const saveImage = require('./assets/images/save.jpg');
 
 export default {
   characters: [
@@ -41,7 +49,7 @@ export default {
       description: "Mais qu'est-ce que cette voix sinistre ? Qu'allez-vous faire maintenant ?",
       actions: [
         {
-          label: 'Continuer votre chemin',
+          label: 'Continuer',
           to: 3
         },
         {
@@ -52,12 +60,12 @@ export default {
     },
     {
       id: 3,
-      title: 'Un OS',
-      image: mainImage,
-      description: 'Un squelette avec une de note sur laquel est écrit " Faites attention, vous ne s\'avez pas dans quel sitation vous êtes "',
+      title: 'Des OS',
+      image: wayImage,
+      description: 'Un squelette avec une de note sur laquelle est écrit " Faites attention, vous ne s\'avez pas dans quel sitation vous êtes "',
       actions: [
         {
-          label: 'Continuer',
+          label: 'Contiuer',
           to: 5
         }
       ]
@@ -66,10 +74,10 @@ export default {
       id: 4,
       title: 'Quelque chose',
       image: voiceImage,
-      description: 'Vous vous approchez de plus en plus de cette fameuse voix du donjon',
+      description: 'Vous êtes de plus en plus proche de la fameuse voix du donjon',
       actions: [
         {
-          label: 'Trouvez la voix',
+          label: 'Continuer',
           to: 8
         }
       ]
@@ -77,7 +85,7 @@ export default {
     {
       id: 5,
       title: 'Deux chemins',
-      image: mainImage,
+      image: twowayImage,
       description: 'Le donjon se divise en deux donc où allons-nous ?',
       actions: [
         {
@@ -110,8 +118,8 @@ export default {
     {
       id: 7,
       title: 'Une bataille',
-      image: mainImage,
-      description: "Un combat féroce semble s'est produit il n'y a pas si longtemps, on apperçoit encore des traces de cendre",
+      image: fghtImage,
+      description: "Un combat féroce semble s'est produit il n'y a pas longtemps, on apperçoit encore des corps et des bêtes sauvages autour !",
       actions: [
         {
           label: 'Avancer',
@@ -123,24 +131,24 @@ export default {
       id: 8,
       title: 'Une petite fille',
       image: mainImage,
-      description: 'Camarade : " Mais comment est-ce possible ? Qu\'est ce qu\'elle peut bien faire la ? "',
+      description: "Mais comment est-ce possible, une petite fille ? Qu'est ce qu'elle peut bien faire la ?",
       recover: true,
       actions: [
         {
-          label: "L ' accompagner avec vous",
+          label: 'Pendre avec vous',
           to: 9
         },
         {
-          label: 'La laisser tranquille',
+          label: 'La laisser',
           to: 7
         }
       ]
     },
     {
       id: 9,
-      title: 'Elle ?',
+      title: 'Elle',
       image: mainImage,
-      description: 'Cete fille ne vous parait-elle pas bizzare ? Seul dans ce donjon ?',
+      description: 'Cette petite fille ne semble pas être ton ennemis',
       actions: [
         {
           label: 'Continuer',
@@ -150,8 +158,8 @@ export default {
     },
     {
       id: 10,
-      title: 'Une pierre tombale',
-      image: mainImage,
+      title: 'Une tombe',
+      image: tombImage,
       description: "Ici repose et enterrer le corps d'un ancier guerrier de la table ronde",
       actions: [
         {
@@ -166,20 +174,20 @@ export default {
     },
     {
       id: 11,
-      title: 'Un objet',
-      image: mainImage,
-      description: 'Mais ceci ne serrai pas la pierre légendaire disparu depuis 100 ans ? Elle pourrais pour servir pendant votre périple',
+      title: 'Un corps',
+      image: tombImage,
+      description: "Ici est entérrer l'élite des élites, arthur pandragon",
       actions: [
         {
-          label: 'Récuperer',
+          label: 'Continuer',
           to: 12
         }
       ]
     },
     {
       id: 12,
-      title: 'Un bruit sourd',
-      image: mainImage,
+      title: 'Un hurlement',
+      image: corridorImage,
       description: 'Vous entendez un rugissement enorme',
       actions: [
         {
@@ -190,10 +198,10 @@ export default {
     },
     {
       id: 13,
-      title: 'Tremblement',
-      image: mainImage,
+      title: 'éfondrement',
+      image: corridorImage,
       description: 'Vkbhgbjhd,',
-      death: 'fsdfdfd',
+      death: 'En vous protègeant, vous avez été écraser par le plafond',
       actions: [
         {
           label: 'Courir',
@@ -208,7 +216,7 @@ export default {
     {
       id: 14,
       title: 'Sain et sauf',
-      image: mainImage,
+      image: corridorImage,
       description: "Vous l'avez échapper belle",
       actions: [
         {
@@ -220,7 +228,7 @@ export default {
     {
       id: 15,
       title: 'De la magie',
-      image: mainImage,
+      image: saveImage,
       description: 'La petit fille a enfaite des pouvoirs magique et à vous protéger',
       actions: [
         {
@@ -232,19 +240,19 @@ export default {
     {
       id: 16,
       title: 'Une stelle',
-      image: mainImage,
-      description: 'Le tremblement de terre vous à amener a une grande zone du donjon et ce trouve une stelle avec quelque chose dessus',
+      image: weaponImage,
+      description: 'Le tremblement de terre vous à amener a une grande zone du donjon et ce trouve une relique',
       actions: [
         {
-          label: 'Avancer vers la stelle',
+          label: 'Avancer vers la relique',
           to: 19
         }
       ]
     },
     {
       id: 17,
-      title: 'Confiance',
-      image: mainImage,
+      title: 'Sans confiance',
+      image: saveImage,
       description: "La petite fille n'était si innoncente que sa, elle vous traine a jusqu'a une stelle dans laqulle quelque chose afin que vous lui ramener la relique",
       actions: [
         {
@@ -256,7 +264,7 @@ export default {
     {
       id: 18,
       title: 'Réveil',
-      image: mainImage,
+      image: gardianImage,
       description: 'Vous avez réveiller le gardine de la reqlique, celle-ci saute sur la petite fille et la devour',
       actions: [
         {
@@ -268,7 +276,7 @@ export default {
     {
       id: 19,
       title: 'Réveil',
-      image: mainImage,
+      image: gardianImage,
       description: 'Vous avez réveiller le gardine de la reqlique en vous approchant de la relique',
       actions: [
         {
@@ -279,9 +287,10 @@ export default {
     },
     {
       id: 20,
-      title: 'Cerber',
-      image: mainImage,
-      description: 'Le cerber est le gardin de ce donjon, préparer vous ',
+      title: 'Gardien',
+      image: gardianImage,
+      description: 'Voici le garfin  de ce donjon, préparer vous !',
+      death: 'Vous avez fuis le combat et le gardin en à porfiter pour vous tuer',
       actions: [
         {
           label: 'Courir',
@@ -296,8 +305,8 @@ export default {
     {
       id: 21,
       title: 'Combat',
-      image: mainImage,
-      description: 'Le cerber attaque, il vous bondit dessus sans hésiter',
+      image: gardianImage,
+      description: 'Le gardien attaque, il vous bondit dessus sans hésiter',
       actions: [
         {
           label: 'Esquiver a gauche',
@@ -316,7 +325,7 @@ export default {
     {
       id: 22,
       title: 'Combat',
-      image: mainImage,
+      image: gardianImage,
       description: "C'était moins une, vous lui avez coincer la gueule avec votre épé",
       actions: [
         {
@@ -328,8 +337,8 @@ export default {
     {
       id: 23,
       title: 'Combat',
-      image: mainImage,
-      description: 'Le cerber revient à la charge',
+      image: gardianImage,
+      description: 'Le gardien revient à la charge',
       actions: [
         {
           label: 'Viser son oeil',
@@ -344,8 +353,9 @@ export default {
     {
       id: 24,
       title: 'Combat',
-      image: mainImage,
+      image: gardianImage,
       description: 'Votre attaque lui a infliger de serieux dégâts, profites en',
+      death: 'Vous avez été trop gentil avec le gardien, votre clémence vous à amener a votre perte',
       actions: [
         {
           label: "L'achever",
