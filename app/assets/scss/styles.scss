@@ -106,3 +106,39 @@ textarea {
     transform: translateX(-100vw);
   }
 }
+
+
+.loader {
+  position: absolute;
+  background-color: #1e1e1e;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: come 1s forwards 5s;
+
+  @keyframes come {
+    100% {
+      transform: translateY(100vh)
+    }
+  }
+
+  &__item {
+    height: 50px;
+    width: 50px;
+    background-color: #fff;
+    animation: loader 1s infinite;
+
+    @keyframes loader {
+      50% {
+        transform: scale(2)
+      }
+
+      0%,
+      100% {
+        transform: scale(1.2)
+      }
+    }
+  }
+}

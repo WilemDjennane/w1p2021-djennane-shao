@@ -1,7 +1,6 @@
 <template>
   <div class="game">
     <audio src="/assets/audios/game.mp3" autoplay loop></audio>
-    <!-- <transition-group> -->
     <img :src="step.image" :alt="step.background" class="game__image">
     <h1 class="game__title">{{step.title}}</h1>
     <div class="game__content">
@@ -17,7 +16,6 @@
         </router-link>
       </div>
     </div>
-    <!-- </transition-group> -->
   </div>
 </template>
 
@@ -52,9 +50,11 @@ export default {
       if (step.id === 11) {
         localStorage.setItem("item", true);
       }
+
       const girlCheck = JSON.parse(localStorage.getItem("recover"));
-      if (step.id === 12 && girlCheck == true) {
-        console.log(router);
+
+      if (step.id === 14 && girlCheck === true) {
+        this.$router.push({ path: "/game/15" });
       }
     },
     getDeath() {

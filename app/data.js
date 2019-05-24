@@ -20,13 +20,17 @@ export default {
   steps: [
     {
       id: 1,
-      title: 'Une nouvelle aventure',
+      title: 'Le donjon',
       image: mainImage,
-      description: "He vous ! Ne seriez-vous pas là pour trouver l'arme légendaire qui est enfouie dans ce dungon ? Cependant, je vous met en garde, vous sera le seul responsable des choix que vous feriez puisque celle-ci causera la mort de tes camarades...",
+      description: 'Hé mon brave ! ne me dite pas que vous êtes à la quête de ce donjon pour la relique ?',
       actions: [
         {
-          label: 'Accepter la quête !',
+          label: 'Si',
           to: 2
+        },
+        {
+          label: 'non',
+          to: '/lose'
         }
       ]
     },
@@ -34,35 +38,35 @@ export default {
       id: 2,
       title: 'Une voix étrange',
       image: voiceImage,
-      description: 'Camarade : " Mais qu\'est-ce que cette voix ? Que deverions-nous faire maintenant ? "',
+      description: "Mais qu'est-ce que cette voix sinistre ? Qu'allez-vous faire maintenant ?",
       actions: [
         {
-          label: 'Poursuivre votre chemin',
+          label: 'Continuer votre chemin',
           to: 3
         },
         {
-          label: 'Suivre la voix',
+          label: 'Trouver la voix',
           to: 4
         }
       ]
     },
     {
       id: 3,
-      title: "Un tas d'os",
+      title: 'Un OS',
       image: mainImage,
-      description: 'Vous prousuivez votre chemin et vous appercever un squelette avec une carnet de note, dans laquel est écrit " Si vous lisz cette note, faite attention à où vous mettiez les pieds et ne faites pas confiance à ..... " la fin de la note est illisible',
+      description: 'Un squelette avec une de note sur laquel est écrit " Faites attention, vous ne s\'avez pas dans quel sitation vous êtes "',
       actions: [
         {
-          label: 'Avançons',
+          label: 'Continuer',
           to: 5
         }
       ]
     },
     {
       id: 4,
-      title: 'Je la sens',
+      title: 'Quelque chose',
       image: voiceImage,
-      description: 'Vous vous approchez de plus en plus de cette fameuse voix du dungeon',
+      description: 'Vous vous approchez de plus en plus de cette fameuse voix du donjon',
       actions: [
         {
           label: 'Trouvez la voix',
@@ -72,9 +76,9 @@ export default {
     },
     {
       id: 5,
-      title: 'Deux chemins ?',
+      title: 'Deux chemins',
       image: mainImage,
-      description: 'Vous allez faire un choix, aller à gauche ou à droite',
+      description: 'Le donjon se divise en deux donc où allons-nous ?',
       actions: [
         {
           label: 'Aller à gauche',
@@ -107,10 +111,10 @@ export default {
       id: 7,
       title: 'Une bataille',
       image: mainImage,
-      description: "Un combat féroce semnle s'est produit il n'y a pas si longtemps, on apperçoit des traces de feu ardente",
+      description: "Un combat féroce semble s'est produit il n'y a pas si longtemps, on apperçoit encore des traces de cendre",
       actions: [
         {
-          label: 'Continuer',
+          label: 'Avancer',
           to: 10
         }
       ]
@@ -136,7 +140,7 @@ export default {
       id: 9,
       title: 'Elle ?',
       image: mainImage,
-      description: 'Cete fille ne vous parait-elle pas bizzare ? Seul dans ce dungeon ?',
+      description: 'Cete fille ne vous parait-elle pas bizzare ? Seul dans ce donjon ?',
       actions: [
         {
           label: 'Continuer',
@@ -174,301 +178,194 @@ export default {
     },
     {
       id: 12,
-      title: 'La fi',
+      title: 'Un bruit sourd',
       image: mainImage,
-      description: 'Vous et vous co-équipier allez choisir de faire le chemin séparement ou le poursuivre à essemble',
+      description: 'Vous entendez un rugissement enorme',
       actions: [
         {
-          label: 'Se séparer en deux groupe',
+          label: 'Quoi ?',
           to: 13
         }
       ]
     },
     {
       id: 13,
-      title: 'Deux chemins ?',
+      title: 'Tremblement',
       image: mainImage,
-      description: 'Vous et vous co-équipier allez choisir de faire le chemin séparement ou le poursuivre à essemble',
+      description: 'Vkbhgbjhd,',
+      death: 'fsdfdfd',
       actions: [
         {
-          label: 'Se séparer en deux groupe',
-          to: '/lose'
+          label: 'Courir',
+          to: 14
         },
         {
-          label: 'Tous aller à droite',
-          to: 3
+          label: 'Se protéger',
+          to: '/lose'
         }
       ]
     },
     {
       id: 14,
-      title: 'Deux chemins ?',
+      title: 'Sain et sauf',
       image: mainImage,
-      description: 'Vous et vous co-équipier allez choisir de faire le chemin séparement ou le poursuivre à essemble',
+      description: "Vous l'avez échapper belle",
       actions: [
         {
-          label: 'Se séparer en deux groupe',
-          to: '/lose'
-        },
-        {
-          label: 'Tous aller à droite',
-          to: 3
+          label: 'Continuer',
+          to: 16
         }
       ]
     },
     {
       id: 15,
-      title: 'Deux chemins ?',
+      title: 'De la magie',
       image: mainImage,
-      description: 'Vous et vous co-équipier allez choisir de faire le chemin séparement ou le poursuivre à essemble',
+      description: 'La petit fille a enfaite des pouvoirs magique et à vous protéger',
       actions: [
         {
-          label: 'Se séparer en deux groupe',
-          to: '/lose'
-        },
-        {
-          label: 'Tous aller à droite',
-          to: 3
+          label: 'Continuer',
+          to: 17
         }
       ]
     },
     {
       id: 16,
-      title: 'Deux chemins ?',
+      title: 'Une stelle',
       image: mainImage,
-      description: 'Vous et vous co-équipier allez choisir de faire le chemin séparement ou le poursuivre à essemble',
+      description: 'Le tremblement de terre vous à amener a une grande zone du donjon et ce trouve une stelle avec quelque chose dessus',
       actions: [
         {
-          label: 'Se séparer en deux groupe',
-          to: '/lose'
-        },
-        {
-          label: 'Tous aller à droite',
-          to: 3
+          label: 'Avancer vers la stelle',
+          to: 19
         }
       ]
     },
     {
       id: 17,
-      title: 'Deux chemins ?',
+      title: 'Confiance',
       image: mainImage,
-      description: 'Vous et vous co-équipier allez choisir de faire le chemin séparement ou le poursuivre à essemble',
+      description: "La petite fille n'était si innoncente que sa, elle vous traine a jusqu'a une stelle dans laqulle quelque chose afin que vous lui ramener la relique",
       actions: [
         {
-          label: 'Se séparer en deux groupe',
-          to: '/lose'
-        },
-        {
-          label: 'Tous aller à droite',
-          to: 3
+          label: 'Voir de plus pres',
+          to: 18
         }
       ]
     },
     {
       id: 18,
-      title: 'Deux chemins ?',
+      title: 'Réveil',
       image: mainImage,
-      description: 'Vous et vous co-équipier allez choisir de faire le chemin séparement ou le poursuivre à essemble',
+      description: 'Vous avez réveiller le gardine de la reqlique, celle-ci saute sur la petite fille et la devour',
       actions: [
         {
-          label: 'Se séparer en deux groupe',
-          to: '/lose'
-        },
-        {
-          label: 'Tous aller à droite',
-          to: 3
+          label: 'Continuer',
+          to: 20
         }
       ]
     },
     {
       id: 19,
-      title: 'Deux chemins ?',
+      title: 'Réveil',
       image: mainImage,
-      description: 'Vous et vous co-équipier allez choisir de faire le chemin séparement ou le poursuivre à essemble',
+      description: 'Vous avez réveiller le gardine de la reqlique en vous approchant de la relique',
       actions: [
         {
-          label: 'Se séparer en deux groupe',
-          to: '/lose'
-        },
-        {
-          label: 'Tous aller à droite',
-          to: 3
+          label: 'Continuer',
+          to: 20
         }
       ]
     },
     {
       id: 20,
-      title: 'Deux chemins ?',
+      title: 'Cerber',
       image: mainImage,
-      description: 'Vous et vous co-équipier allez choisir de faire le chemin séparement ou le poursuivre à essemble',
+      description: 'Le cerber est le gardin de ce donjon, préparer vous ',
       actions: [
         {
-          label: 'Se séparer en deux groupe',
+          label: 'Courir',
           to: '/lose'
         },
         {
-          label: 'Tous aller à droite',
-          to: 3
+          label: 'Combattre',
+          to: 21
         }
       ]
     },
     {
       id: 21,
-      title: 'Deux chemins ?',
+      title: 'Combat',
       image: mainImage,
-      description: 'Vous et vous co-équipier allez choisir de faire le chemin séparement ou le poursuivre à essemble',
+      description: 'Le cerber attaque, il vous bondit dessus sans hésiter',
       actions: [
         {
-          label: 'Se séparer en deux groupe',
-          to: '/lose'
+          label: 'Esquiver a gauche',
+          to: 23
         },
         {
-          label: 'Tous aller à droite',
-          to: 3
+          label: 'Parer avec votre épé',
+          to: 22
+        },
+        {
+          label: 'Esquiver a droite',
+          to: 23
         }
       ]
     },
     {
       id: 22,
-      title: 'Deux chemins ?',
+      title: 'Combat',
       image: mainImage,
-      description: 'Vous et vous co-équipier allez choisir de faire le chemin séparement ou le poursuivre à essemble',
+      description: "C'était moins une, vous lui avez coincer la gueule avec votre épé",
       actions: [
         {
-          label: 'Se séparer en deux groupe',
-          to: '/lose'
-        },
-        {
-          label: 'Tous aller à droite',
-          to: 3
+          label: 'Enfoncer épé',
+          to: 24
         }
       ]
     },
     {
       id: 23,
-      title: 'Deux chemins ?',
+      title: 'Combat',
       image: mainImage,
-      description: 'Vous et vous co-équipier allez choisir de faire le chemin séparement ou le poursuivre à essemble',
+      description: 'Le cerber revient à la charge',
       actions: [
         {
-          label: 'Se séparer en deux groupe',
-          to: '/lose'
+          label: 'Viser son oeil',
+          to: 24
         },
         {
-          label: 'Tous aller à droite',
-          to: 3
+          label: 'Parer avec votre épé',
+          to: '/lose'
         }
       ]
     },
     {
       id: 24,
-      title: 'Deux chemins ?',
+      title: 'Combat',
       image: mainImage,
-      description: 'Vous et vous co-équipier allez choisir de faire le chemin séparement ou le poursuivre à essemble',
+      description: 'Votre attaque lui a infliger de serieux dégâts, profites en',
       actions: [
         {
-          label: 'Se séparer en deux groupe',
-          to: '/lose'
+          label: "L'achever",
+          to: 25
         },
         {
-          label: 'Tous aller à droite',
-          to: 3
+          label: 'Laisse ageuniser',
+          to: '/lose'
         }
       ]
     },
     {
       id: 25,
-      title: 'Deux chemins ?',
+      title: 'Vaincu',
       image: mainImage,
-      description: 'Vous et vous co-équipier allez choisir de faire le chemin séparement ou le poursuivre à essemble',
+      description: 'Maintenant que le ceber est vaincu, vous pouvez dés à présent récupere la relique',
       actions: [
         {
-          label: 'Se séparer en deux groupe',
-          to: '/lose'
-        },
-        {
-          label: 'Tous aller à droite',
-          to: 3
-        }
-      ]
-    },
-    {
-      id: 26,
-      title: 'Deux chemins ?',
-      image: mainImage,
-      description: 'Vous et vous co-équipier allez choisir de faire le chemin séparement ou le poursuivre à essemble',
-      actions: [
-        {
-          label: 'Se séparer en deux groupe',
-          to: '/lose'
-        },
-        {
-          label: 'Tous aller à droite',
-          to: 3
-        }
-      ]
-    },
-    {
-      id: 27,
-      title: 'Deux chemins ?',
-      image: mainImage,
-      description: 'Vous et vous co-équipier allez choisir de faire le chemin séparement ou le poursuivre à essemble',
-      actions: [
-        {
-          label: 'Se séparer en deux groupe',
-          to: '/lose'
-        },
-        {
-          label: 'Tous aller à droite',
-          to: 3
-        }
-      ]
-    },
-    {
-      id: 28,
-      title: 'Deux chemins ?',
-      image: mainImage,
-      description: 'Vous et vous co-équipier allez choisir de faire le chemin séparement ou le poursuivre à essemble',
-      actions: [
-        {
-          label: 'Se séparer en deux groupe',
-          to: '/lose'
-        },
-        {
-          label: 'Tous aller à droite',
-          to: 3
-        }
-      ]
-    },
-    {
-      id: 29,
-      title: 'Deux chemins ?',
-      image: mainImage,
-      description: 'Vous et vous co-équipier allez choisir de faire le chemin séparement ou le poursuivre à essemble',
-      actions: [
-        {
-          label: 'Se séparer en deux groupe',
-          to: '/lose'
-        },
-        {
-          label: 'Tous aller à droite',
-          to: 3
-        }
-      ]
-    },
-    {
-      id: 30,
-      title: 'Deux chemins ?',
-      image: mainImage,
-      description: 'Vous et vous co-équipier allez choisir de faire le chemin séparement ou le poursuivre à essemble',
-      actions: [
-        {
-          label: 'Se séparer en deux groupe',
-          to: '/lose'
-        },
-        {
-          label: 'Tous aller à droite',
-          to: 3
+          label: 'Récuprer',
+          to: '/win'
         }
       ]
     }

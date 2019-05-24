@@ -3,9 +3,9 @@
     <h1 class="lose__title">Vous êtes mort !</h1>
     <div class="lose__text">
       <p>{{death}}</p>
-      <p>Vous verriez mieux la prochaine fois !</p>
+      <p>Vous feriez mieux la prochaine fois !</p>
     </div>
-    <router-link to="/game/1" class="lose__link">
+    <router-link to="/home" class="lose__link">
       <span @click="reset">Rejouer</span>
     </router-link>
   </div>
@@ -17,7 +17,7 @@ export default {
     return {
       death: deathService.value(),
       reset() {
-        localStorage.removeItem("step");
+        localStorage.setItem("step", 1);
         localStorage.removeItem("death");
         localStorage.removeItem("recover");
       }

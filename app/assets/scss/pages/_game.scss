@@ -15,9 +15,31 @@
   }
 
   &__title {
+    position: relative;
     font-size: 40px;
     font-weight: bold;
     text-transform: uppercase;
+    background-color: #1e1e1e;
+    padding: 10px 50px;
+
+    &::before,
+    &::after {
+      content: '';
+      position: absolute;
+      height: 50%;
+      width: 30%;
+      background-color: #1e1e1e;
+      top: 50%;
+      transform: translateY(-50%)
+    }
+
+    &:before {
+      left: -30%;
+    }
+
+    &::after {
+      right: -30%;
+    }
   }
 
   &__content {
@@ -37,7 +59,8 @@
     text-align: center;
     border-radius: 20px;
     line-height: 1.5;
-    margin: 0 0 20px 0;
+    margin: 0 auto 20px auto;
+    width: 50%;
   }
 
   &__link {
