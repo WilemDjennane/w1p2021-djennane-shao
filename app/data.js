@@ -197,7 +197,7 @@ export default {
       title: 'éfondrement',
       image: corridorImage,
       description: "Le plafond commencer a s'écrouler,",
-      death: 'En vous protègeant, vous avez été écraser par le plafond',
+      death: "En vous protègeant, vous avez été écraser par l'éboulement",
       actions: [
         {
           label: 'Courir',
@@ -213,7 +213,7 @@ export default {
       id: 14,
       title: 'Sain et sauf',
       image: corridorImage,
-      description: "Vous l'avez échapper belle",
+      description: "Vous l'avez échappé belle",
       actions: [
         {
           label: 'Continuer',
@@ -225,7 +225,7 @@ export default {
       id: 15,
       title: 'De la magie',
       image: saveImage,
-      description: 'La petit fille a enfaite des pouvoirs magique et à vous protéger',
+      description: 'La petite fille a enfaite des pouvoirs magique et à vous protéger',
       actions: [
         {
           label: 'Continuer',
@@ -235,9 +235,9 @@ export default {
     },
     {
       id: 16,
-      title: 'Une stelle',
+      title: 'Une relique',
       image: weaponImage,
-      description: 'Le tremblement de terre vous à amener a une grande zone du donjon et ce trouve une relique',
+      description: 'Le tremblement de terre vous à amener à une grande zone du donjon et ce trouve une relique',
       actions: [
         {
           label: 'Avancer vers la relique',
@@ -249,7 +249,7 @@ export default {
       id: 17,
       title: 'Sans confiance',
       image: saveImage,
-      description: "La petite fille n'était pas si innoncente que sa, elle vous traine jusqu'à la relique pour que vous lui la ramène",
+      description: "La petite fille n'était pas si innoncente que sa, elle vous menace de lui ramener la relique",
       actions: [
         {
           label: 'Voir de plus pres',
@@ -259,9 +259,9 @@ export default {
     },
     {
       id: 18,
-      title: 'Réveil',
+      title: 'éveille',
       image: gardianImage,
-      description: 'Vous avez réveiller le gardine de la reqlique, celle-ci saute sur la petite fille et la devour',
+      description: 'Vous avez réveillé le gardien de la relique et dévore la petite fille',
       actions: [
         {
           label: 'Continuer',
@@ -271,9 +271,9 @@ export default {
     },
     {
       id: 19,
-      title: 'Réveil',
+      title: 'éveille',
       image: gardianImage,
-      description: 'Vous avez réveiller le gardine de la reqlique en vous approchant de la relique',
+      description: 'Vous avez réveillé le gardien de la relique en vous approchant trop près',
       actions: [
         {
           label: 'Continuer',
@@ -285,8 +285,8 @@ export default {
       id: 20,
       title: 'Gardien',
       image: gardianImage,
-      description: 'Voici le garfin  de ce donjon, préparer vous !',
-      death: 'Vous avez fuis le combat et le gardin en à porfiter pour vous tuer',
+      description: 'Voici le gardien du donjon, préparer vous !',
+      death: 'Vous avez fuis le combat et le gardin en à porfiter pour vous dévorer',
       actions: [
         {
           label: 'Courir',
@@ -305,7 +305,7 @@ export default {
       description: 'Le gardien attaque, il vous bondit dessus sans hésiter',
       actions: [
         {
-          label: 'Esquiver a gauche',
+          label: 'ésquiver a gauche',
           to: 23
         },
         {
@@ -313,7 +313,7 @@ export default {
           to: 22
         },
         {
-          label: 'Esquiver a droite',
+          label: 'ésquiver a droite',
           to: 23
         }
       ]
@@ -325,7 +325,7 @@ export default {
       description: "C'était moins une, vous lui avez coincer la gueule avec votre épé",
       actions: [
         {
-          label: 'Enfoncer épé',
+          label: "Enfoncer l'épé",
           to: 24
         }
       ]
@@ -350,15 +350,15 @@ export default {
       id: 24,
       title: 'Combat',
       image: gardianImage,
-      description: 'Votre attaque lui a infliger de serieux dégâts, profites en',
-      death: 'Vous avez été trop gentil avec le gardien, votre clémence vous à amener a votre perte',
+      description: 'Votre attaque lui a infligé de serieux dégâts, profites en',
+      death: 'Vous avez été trop gentil avec le gardien, votre clémence vous à mené à votre perte',
       actions: [
         {
           label: "L'achever",
           to: '/win'
         },
         {
-          label: 'Laisse ageuniser',
+          label: 'Laisser agoniser',
           to: '/lose'
         }
       ]
