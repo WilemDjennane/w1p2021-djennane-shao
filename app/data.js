@@ -14,15 +14,15 @@ export default {
   characters: [
     {
       name: 'Chevalier',
-      description: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eum voluptas repudiandae, minus unde, ullam aliquid quasi officiis mollitia laborum blanditiis numquam! Debitis voluptate, nihil aliquid fugiat voluptates voluptatum sapiente cumque.'
+      description: 'Grâce à sa force, les ennemis ne seront que des petites insectes'
     },
     {
       name: 'Mage',
-      description: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eum voluptas repudiandae, minus unde, ullam aliquid quasi officiis mollitia laborum blanditiis numquam! Debitis voluptate, nihil aliquid fugiat voluptates voluptatum sapiente cumque.'
+      description: 'Il voit à travers tout, connait les compétences des autres presonnes'
     },
     {
       name: 'Assassin',
-      description: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eum voluptas repudiandae, minus unde, ullam aliquid quasi officiis mollitia laborum blanditiis numquam! Debitis voluptate, nihil aliquid fugiat voluptates voluptatum sapiente cumque.'
+      description: "Rapide comme l'écalire et un bon sens de la tactique ancestral"
     }
   ],
   steps: [
@@ -30,15 +30,11 @@ export default {
       id: 1,
       title: 'Le donjon',
       image: mainImage,
-      description: 'Hé mon brave ! ne me dite pas que vous êtes à la quête de ce donjon pour la relique ?',
+      description: 'Hé mon brave ! êtes-vous à la quête de la relique du donjon ?',
       actions: [
         {
-          label: 'Si',
+          label: 'Oui',
           to: 2
-        },
-        {
-          label: 'non',
-          to: '/lose'
         }
       ]
     },
@@ -46,7 +42,7 @@ export default {
       id: 2,
       title: 'Une voix étrange',
       image: voiceImage,
-      description: "Mais qu'est-ce que cette voix sinistre ? Qu'allez-vous faire maintenant ?",
+      description: "Mais qu'est-ce que cette voix ? Qu'allez-vous faire maintenant ?",
       actions: [
         {
           label: 'Continuer',
@@ -62,7 +58,7 @@ export default {
       id: 3,
       title: 'Des OS',
       image: wayImage,
-      description: 'Un squelette avec une de note sur laquelle est écrit " Faites attention, vous ne s\'avez pas dans quel sitation vous êtes "',
+      description: 'Ce couloir semble sûr mais rien ne semble normal depuis notre arriver',
       actions: [
         {
           label: 'Contiuer',
@@ -74,7 +70,7 @@ export default {
       id: 4,
       title: 'Quelque chose',
       image: voiceImage,
-      description: 'Vous êtes de plus en plus proche de la fameuse voix du donjon',
+      description: 'Vous êtes de plus en plus proche de la fameuse voix',
       actions: [
         {
           label: 'Continuer',
@@ -86,7 +82,7 @@ export default {
       id: 5,
       title: 'Deux chemins',
       image: twowayImage,
-      description: 'Le donjon se divise en deux donc où allons-nous ?',
+      description: 'Le donjon se divise en deux donc où allez-vous ?',
       actions: [
         {
           label: 'Aller à gauche',
@@ -102,8 +98,8 @@ export default {
       id: 6,
       title: 'Une ombre',
       image: roomImage,
-      description: "Au loin de votre chemin vous croiser une sorte d'entité simuler dans l'ombre",
-      death: "En vous approchant de l'entité, celle-ci vous a instantanément tuer",
+      description: "Au loin de votre chemin vous croiser un être viviant simuler dans l'ombre",
+      death: 'En vous approchant de la chose, celle-ci vous à instantanément tuer',
       actions: [
         {
           label: 'Voir de plus près',
@@ -119,7 +115,7 @@ export default {
       id: 7,
       title: 'Une bataille',
       image: fghtImage,
-      description: "Un combat féroce semble s'est produit il n'y a pas longtemps, on apperçoit encore des corps et des bêtes sauvages autour !",
+      description: "Un combat féroce semble s'est produit il n'y a pas longtemps, on apperçoit encore des corps et des bêtes sauvages tout autour !",
       actions: [
         {
           label: 'Avancer',
@@ -146,7 +142,7 @@ export default {
     },
     {
       id: 9,
-      title: 'Elle',
+      title: 'Innoncente',
       image: mainImage,
       description: 'Cette petite fille ne semble pas être ton ennemis',
       actions: [
@@ -160,7 +156,7 @@ export default {
       id: 10,
       title: 'Une tombe',
       image: tombImage,
-      description: "Ici repose et enterrer le corps d'un ancier guerrier de la table ronde",
+      description: "Ici repose en paix le corps d'un ancier guerrier de la table ronde",
       actions: [
         {
           label: 'Creuser',
@@ -176,7 +172,7 @@ export default {
       id: 11,
       title: 'Un corps',
       image: tombImage,
-      description: "Ici est entérrer l'élite des élites, arthur pandragon",
+      description: 'Le crops broyer du Roi Arthur, une sorte de bête de sauvage à du le causer de telle blesseure',
       actions: [
         {
           label: 'Continuer',
@@ -186,12 +182,12 @@ export default {
     },
     {
       id: 12,
-      title: 'Un hurlement',
+      title: 'Un bruit',
       image: corridorImage,
-      description: 'Vous entendez un rugissement enorme',
+      description: 'Un énorme crie viens du fond du donjon',
       actions: [
         {
-          label: 'Quoi ?',
+          label: '?',
           to: 13
         }
       ]
@@ -200,7 +196,7 @@ export default {
       id: 13,
       title: 'éfondrement',
       image: corridorImage,
-      description: 'Vkbhgbjhd,',
+      description: "Le plafond commencer a s'écrouler,",
       death: 'En vous protègeant, vous avez été écraser par le plafond',
       actions: [
         {
@@ -359,23 +355,11 @@ export default {
       actions: [
         {
           label: "L'achever",
-          to: 25
+          to: '/win'
         },
         {
           label: 'Laisse ageuniser',
           to: '/lose'
-        }
-      ]
-    },
-    {
-      id: 25,
-      title: 'Vaincu',
-      image: mainImage,
-      description: 'Maintenant que le ceber est vaincu, vous pouvez dés à présent récupere la relique',
-      actions: [
-        {
-          label: 'Récuprer',
-          to: '/win'
         }
       ]
     }

@@ -1,5 +1,5 @@
 <template>
-  <div class="game">
+  <div class="game" ref="game">
     <audio src="/assets/audios/game.mp3" autoplay loop></audio>
     <img :src="step.image" :alt="step.background" class="game__image">
     <h1 class="game__title">{{step.title}}</h1>
@@ -41,14 +41,17 @@ export default {
       stepCountService.count(stepCountNub.id);
     },
     check() {
+      this.$refs.game.classList.add("fade");
+
+      setTimeout(() => {
+        this.$refs.game.classList.remove("fade");
+      }, 500);
+
       const step = data.steps.find(
         s => s.id === parseInt(this.$route.params.id)
       );
       if (step.id === 9) {
         localStorage.setItem("recover", true);
-      }
-      if (step.id === 11) {
-        localStorage.setItem("item", true);
       }
 
       const girlCheck = JSON.parse(localStorage.getItem("recover"));

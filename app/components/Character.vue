@@ -8,7 +8,6 @@
         class="characters__item"
       >
         <router-link to="/game/1">
-          <img :src="character.image" alt>
           <p class="characters__name">{{character.name}}</p>
           <span class="characters__description">{{character.description}}</span>
         </router-link>

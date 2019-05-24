@@ -7,6 +7,29 @@
   justify-content: space-around;
   align-items: center;
 
+  &.fade {
+    animation: fade 1s ease;
+
+    @keyframes fade {
+      0% {
+        opacity: 0;
+      }
+
+      20% {
+        opacity: 0;
+
+      }
+
+      50% {
+        opacity: 1
+      }
+
+      100% {
+        opacity: 1;
+      }
+    }
+  }
+
   &__image {
     width: 100vw;
     height: 100vh;
